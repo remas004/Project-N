@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صفحة الجزيرة - NEOM</title>
+  <link rel="stylesheet" href="formystyle.css">
+  <style>
+    .island-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .island-card {
+      position: relative;
+      width: 300px;
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform .2s;
+    }
+    .island-card:hover {
+      transform: scale(1.03);
+    }
+    .island-card img {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .island-description {
+      display: none;
+      background: #fff;
+      padding: 15px;
+      border-radius: 0 0 8px 8px;
+      line-height: 1.6;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="KU.webp" alt="صورة الهيدر" class="header-image">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="formpage.html">Goals</a> 
+        <a href="island.html">Island</a>
+        <a href="imges.html">Sign Up</a>
+        <a href="page4.html">Test</a>
+        <a href="page5.html">Team</a>
+     
+      </nav>
+    </header>
+
+    <main>
+      <div class="main1">
+        <div class="main2">
+          <h2>Explore NEOM Islands</h2>
+          <div class="island-gallery">
+            <!-- بطاقة جزيرة شيبارة -->
+            <div class="island-card" onclick="toggleDesc('desc-sheybarah')">
+              <img src="shep.jpg" alt="جزيرة شيبارة">
+              <div id="desc-sheybarah" class="island-description">
+                <strong>جزيرة شيبارة (Sheybarah Island)</strong><br>
+               Sheybarah Island is part of the Red Sea Project in the Kingdom of Saudi Arabia and is considered one of the most prominent luxury tourist destinations. The island features a unique architectural design, with circular villas floating above the water, creating a futuristic atmosphere that harmonizes beautifully with the marine environment.
+                
+               
+              </div>
+            </div>
+            <!-- بطاقة جزيرة سندالة -->
+            <div class="island-card" onclick="toggleDesc('desc-sindalah')">
+              <img src="sen.jpg" alt="جزيرة سندالة">
+              <div id="desc-sindalah" class="island-description">
+                <strong>جزيرة سندالة (Sindalah Island)</strong><br>
+                Sindalah Island is the first luxury marine destination within the NEOM project, located on the Red Sea. It features a modern design, a yacht marina, upscale hotels, and entertainment facilities. Aiming to become a global hub for luxury and marine tourism, it is set to welcome visitors starting in 2024.
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      © 2025 جميع الحقوق محفوظة
+    </footer>
+  </div>
+
+  <script>
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      // إظهار/إخفاء الوصف
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+      } else {
+        // إخفاء أي وصف آخر مفتوح
+        document.querySelectorAll('.island-description').forEach(d => d.style.display = 'none');
+        el.style.display = 'block';
+        // تمرير خفيف إلى النص
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formystyle.css">
+    <title>الصفحة 4</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="KU.webp" width="800" height="300" alt="صورة الهيدر">
+            <nav>
+                <a href="indexx.html">Home</a>
+                <a href="formpage.html">Goals</a>
+                <a href="island.html">Island</a>
+                <a href="imges.html">Sign Up</a>
+                <a href="page4.html">Test</a>
+                <a href="page5.html">Team</a>
+            </nav>
+        </header>
+
+          <main>
+            <div class="main1">
+                <h2 style="font-family: 'Times New Roman', Times, serif;background-color: rgb(218, 186, 127);">  Test Your Knowledge About NEOM</h2>
+                <form class="qw" id="quizForm">
+                    <div class="question">
+                        <p>1. What is the name of the linear city in NEOM?</p>
+                        <input type="radio" name="q1" value="True"> The line<br>
+                        <input type="radio" name="q1" value="False"> Trojena<br>
+                        <input type="radio" name="q1" value="False"> Sindalah<br>
+                    </div>
+                    <div class="question">
+                        <p>2. What is one of the goals of the NEOM projects?</p>
+                        <input type="radio" name="q2" value="True"> Relying on renewable energy<br>
+                        <input type="radio" name="q2" value="False"> Increased industrial pollution<br>
+                        <input type="radio" name="q2" value="False">  Reduce the use of technology<br>
+                    </div>
+                    <div class="question">
+                        <p>3. Where is NEOM located?</p>
+                        <input type="radio" name="q3" value="False"> South of Saudi Arabia<br>
+                        <input type="radio" name="q3" value="False"> Central of Saudi Arabia <br>
+                        <input type="radio" name="q3" value="True"> Northwest of Saudi Arabia<br>
+                    </div>
+                    <div class="question">
+                        <p>4. Who is the founder of the NEOM project?</p>
+                        <input type="radio" name="q4" value="True">Prince Mohammed bin Salman <br>
+                        <input type="radio" name="q4" value="False">Prince Alwaleed bin Talal <br>
+                        <input type="radio" name="q4" value="False">Turki Al Al-Sheikh <br>
+                                   <br>
+                                   <br>
+                    </div>
+                    <button type="button" onclick="checkAnswers()"> View the result</button>
+                </form>
+                <div id="result"></div>
+                 <script>
+           function checkAnswers() {
+  let correct = 0;
+  let answers = document.querySelectorAll('input[type=radio]:checked');
+  answers.forEach(answer => {
+    if (answer.value === "True") correct++;
+  });
+
+  let message = "";
+  switch (correct) {
+    case 4:
+      message = "Excellent! You have great knowledge about NEOM.";
+      break;
+    case 3:
+      message = "Very good! Most of your answers are correct.";
+      break;
+    case 2:
+      message = "Good effort, but you can learn more about NEOM.";
+      break;
+    default:
+      message = "You need to read more about NEOM.";
+  }
+  document.getElementById("result").innerText = `Correct Answers: ${correct} out of 4\n${message}`;
+ }
+            </script>   
+  
+        </main>
+         </div>
+        </main>
+        <footer>
+            ©

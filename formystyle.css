@@ -1,0 +1,154 @@
+/* تنسيق عام للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EFFFFF; /* خلفية سماوية فاتحة */
+       margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* تنسيق الهيدر */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a4d6c;
+}
+
+header img {
+    width: 950px;
+    height: 300px;
+}
+
+.im {
+    width: 900px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+/* تنسيق الشريط العلوي (Navigation Bar) */
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/* تنسيق القسم الرئيسي */
+.main1 {
+    margin-top: 20px;
+}
+
+.main2 {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* تنسيق العناوين */
+h2 {
+    text-align: center;
+    color: #1a4d6c;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(34, 87, 104);
+    color: white;
+}
+
+/* تنسيق الصفوف الزوجية */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* تأثير عند التمرير على الصفوف */
+tr:hover {
+    background-color: #ddd;
+}
+
+/* تنسيق الفوتر */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a4d6c;
+    color: white;
+}
+
+
+/* إضافات خاصة بصفحة الجزر  */
+
+/* شبكة عرض الجزر */
+.island-gallery {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* بطاقة الجزيرة */
+.island-card {
+  position: relative;
+  width: 300px;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+
+.island-card:hover {
+  transform: scale(1.03);
+}
+
+/* صورة الجزيرة */
+.island-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* وصف الجزيرة (مخفي افتراضيًا) */
+.island-description {
+  display: none;
+  background: #fff;
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
+  line-height: 1,6;
+  color: #333;
+}
+
+/* تمرير سلس عند الظهور */
+.island-description.show {
+  display: block;
+}
